@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <h2>Say hello button 😁</h2>
+    <p>Click to say hello</p>
+    <br/>
+    <br/>
+    <button id="myButton" style="display: none;">Click me!</button>
+    <script>
+        setTimeout(() => {
+            const button = document.getElementById('myButton');
+            button.style.display = 'inline';
+        }, 2000);
+    </script>
+    <br/><br/>
+    <label id="myLabel" style="display: none;">Hello!</label>
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            setTimeout(()=>{
+                document.getElementById('myLabel').style.display = 'inline';
+            }, 2000)
+        });
+    </script>
+</body>
+</html>

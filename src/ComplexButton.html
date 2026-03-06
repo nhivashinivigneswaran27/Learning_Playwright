@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <h2>This is a complex button</h2>
+    <p>It becomes visible after 2 seconds, and then it becomes enabled after another 2 seconds</p>
+    <br/>
+    <br/>
+    <button id="myButton" style="display: none;" disabled>Click me!</button>
+    <script>
+        setTimeout(() => {
+            const button = document.getElementById('myButton');
+            button.style.display = 'inline';
+            setTimeout(() => {
+                button.disabled = false;
+            }, 2000);
+        }, 2000);
+    </script>
+    <br/><br/>
+    <label id="myLabel" style="display: none;">Button clicked!</label>
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            console.log('Button clicked!');
+            document.getElementById('myLabel').style.display = 'inline';
+        });
+    </script>
+</body>
+</html>

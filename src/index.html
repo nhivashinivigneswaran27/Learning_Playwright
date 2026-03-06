@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Cool events</title>
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Cool events!</h1>
+        <p>Your one-stop solution for all event planning needs!</p>
+    </header>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Wedding Planning</li>
+            <li>Corporate Events</li>
+            <li>Private Parties</li>
+            <li>Graduation Parties</li>
+            <li>Fundraisers</li>
+            <li>Concerts and Festivals</li>
+            <!-- <li></li> -->
+        </ul>
+    </section>
+    <section id="about-us">
+        <h2>About Us</h2>
+        <div style="display: flex; align-items: flex-start;">
+            <p style="flex: 1; margin-right: 20px;">
+                At Cool events, we specialize in creating unforgettable experiences. Our team of experts ensures every
+                detail
+                is taken care of, so you can enjoy your event stress-free. We are dedicated to making your event a
+                success, no matter the size or
+                type. Our team of experienced professionals will work with you to create a customized plan that meets
+                your needs and exceeds your expectations.
+                We take pride in our attention to detail and commitment to excellence, ensuring that every aspect of
+                your event is executed flawlessly.
+
+                Whether you're planning a wedding, corporate event, or private party, we have the expertise and
+                resources to make it a success.
+                From venue selection and catering to entertainment and decor, we handle every aspect of event planning
+                with professionalism and care.
+
+                An event is not just a gathering; it's a memory in the making. We understand the importance of creating
+                lasting memories for you and your guests.
+            </p>
+            <img src="assets/castle.jpg" alt="A beautiful castle venue" style="width:40%; max-width:300px;">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@coolevents.com</p>
+        <p>Phone: +1-800-123-4567</p>
+    </section>
+
+    <section id="feedback">
+        <h2>Feedback</h2>
+        <a href="FeedBackForm.html">Go to Feedback Form</a>
+    </section>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner">
+        <p>We use cookies to improve your experience. Do you accept cookies?</p>
+        <button class="accept" onclick="handleCookieConsent(true)" data-testid="accept-cookies">Accept</button>
+        <button class="decline" onclick="handleCookieConsent(false)" data-testid="decline-cookies">Decline</button>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

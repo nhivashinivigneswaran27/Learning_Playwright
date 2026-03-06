@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <h1>Feedback Form</h1>
+    <br />
+    <form id="feedbackForm" onsubmit="return submitForm(this)">
+        <p>Please fill out the Feedback Form below to provide your feedback. Your input is valuable to us and helps us improve
+            our services.</p>
+        <button style="display:none">Hidden feature</button>
+        <!-- Required Fields -->
+        <label for="name">Name (required):</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email (required):</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <span id="emailError" style="color: red; display: none;">Invalid email format</span><br><br>
+
+
+        <label for="comment">Comment (required):</label><br>
+        <textarea id="comment" name="comment" required></textarea><br><br>
+
+        <!-- Optional Fields -->
+        <label for="highlights">Event Highlights (optional):</label><br>
+        <textarea id="highlights" name="highlights"></textarea><br><br>
+
+        <!-- Areas for Improvement -->
+        <label for="improvement">Areas for Improvement (optional):</label><br>
+        <select id="improvement" name="improvement" multiple onchange="toggleOtherTextarea()">
+            <option value="content">Content</option>
+            <option value="presentation">Presentation</option>
+            <option value="timing">Timing</option>
+            <option value="others">Others</option>
+        </select><br><br>
+
+        <!-- Textarea for "Others" -->
+        <div id="otherTextContainer" style="display: none;">
+            <label for="otherText">Please specify:</label><br>
+            <textarea id="otherText" name="otherText"></textarea><br><br>
+        </div>
+
+        <!-- Terms of Service Agreement -->
+        <input type="checkbox" id="tos" name="tos" required>
+        <label for="tos">
+            I agree to the site's <a href="TermsOfService.html" target="_blank">Terms of Service</a>
+        </label>
+
+        <button type="submit">Submit</button>
+        <!-- Add Save Button -->
+        <br />
+        <button type="button" id="saveButton">Save Progress</button>
+        <br />
+        <button type="button" id="clearButton">Clear Progress</button>
+    </form>
+    <script src="js/feedBackForm.js"></script>
+</body>
+
+</html>

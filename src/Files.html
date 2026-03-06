@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploader</title>
+    <link rel="stylesheet" href="css/files.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <h1>File Uploader</h1>
+        
+        <div class="upload-area" id="uploadArea">
+            <p>Drag and drop files here or</p>
+            <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                Choose Files
+            </button>
+            <input type="file" id="fileInput" class="file-input" multiple accept="*/*">
+            <p style="margin-top: 10px; color: #666; font-size: 14px;">
+                Multiple files supported
+            </p>
+        </div>
+
+        <div class="file-list">
+            <h3>Selected Files:</h3>
+            <div id="fileListContainer">
+                <div class="empty-state">No files selected</div>
+            </div>
+            <button class="clear-btn" id="clearBtn" onclick="clearFiles()" style="display: none;">
+                Clear All Files
+            </button>
+        </div>
+
+        <div class="download-section">
+            <h3>File Downloader</h3>
+            <p>Download a sample document:</p>
+            <button class="download-btn" onclick="downloadDocument()">
+                Download Document
+            </button>
+        </div>
+    </div>
+
+    <script src="js/files.js"></script>
+</body>
+</html>
